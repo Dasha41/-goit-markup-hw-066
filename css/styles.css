@@ -832,12 +832,9 @@ padding-right: 16px;
   max-width: 264px;
   margin-top: 16px;
 
-}
-.footer-soc{
-  display: block;
   
-
 }
+
 
 .footer-title{
   
@@ -854,7 +851,7 @@ padding-bottom: 16px;
 .footer-soc-list {
   display: flex;
   justify-content: center;
-  gap:16px;
+  gap: 16px;
   
 }
 
