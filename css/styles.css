@@ -356,7 +356,7 @@ border:none;
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
-    display: inline-block;
+    display: block;
     
   }
   .user-name{
@@ -424,63 +424,52 @@ border:none;
     background-color: var(--color-accent);
     cursor: pointer;
   }
-  .policy-text span {
+ 
+ .modal-label{
+  background-color: transparent;
+  outline: none;
+  transition: var(--hover-transition)
+}
+  .custom-checkbox{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 16px;
     height: 16px;
-    border: 1.25px solid var(--color-text-main);
-    border-radius: 2px;
-    margin-right: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    fill: transparent;
-    transition: background-color var(--hover-transition),
-      border var(--hover-transition), fill var(--hover-transition);
-  }
-  .policy-check:checked + .policy-text span{
-    background-color: var(--color-accent);
-    border: none;
-    fill: #f4f4fd; 
-     }
-  
-  
- 
---/*.policy-check{
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  position: absolute;
-}
---*/
-.policy-check:checked + .check-icon{
- background-color: var(--color-logo);
- background-image: url(../images/icons.svg#icon-Vector-1);
-background-origin:border-box ;
-background-position:center ;
-}
-.check-icon{
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  border: 1px solid  var(--color-text-add);
-  position: absolute;
-}
-
-
-  .policy-link {
-    margin-left: 2px;
-    color: var(--color-logo);
-    text-decoration: underline;
-    transition: cursor var(--hover-transition);
-  }
-  .policy-link:hover,
-  .policy-link:focus {
     cursor: pointer;
+    margin-right: 8px;
+    border-radius: 2px;
+    border: 1px solid var(--color-text-main)
+    
   }
-  
+  .check-icon{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+  }
+  .modal-checkbox:checked + .custom-checkbox{
+    background-color: var(--color-logo);
+    border: 1px solid var(--color-logo)
+  }
+.modal-checkbox:checked + .custom-checkbox .check-icon {
+opacity: 1;
+fill: var(--color-background-cards);
+}
+.modal-text{
+  display: inline-block;
 
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
 
-
+color: var(--color-accent-customers);
+}
+.modal-link{
+  color: var(--color-logo);
+  outline: none;
+  margin-left: 3px;
+}
 .features-title {
   line-height: 1.2;
   font-weight: 500;
